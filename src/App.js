@@ -1,23 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
+import EmployeeTable from "./components/employee-table/index.jsx";
 import './App.css';
+
+import data from "./data/employeedata.json";
 
 function App() {
   return (
-    <div className="App">
+    <div className="page-container">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <EmployeeTable data={data}></EmployeeTable>
       </header>
     </div>
   );
