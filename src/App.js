@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import EmployeeTable from "./components/employee-table/index.jsx";
+import { Header, Icon } from 'semantic-ui-react'
 import './App.css';
 
 import data from "./data/employeedata.json";
@@ -32,7 +33,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="page-container">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Icon color="purple" className="group" size="massive" alt="logo"/>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <Header as='h1'>Employee Directory</Header>
         <EmployeeTable
           data={this.state.data}
           sortBy={this.sortBy}

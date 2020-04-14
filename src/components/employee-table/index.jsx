@@ -1,6 +1,5 @@
 import React from "react";
-import { Icon, Label, Menu, Table } from 'semantic-ui-react'
-
+import { Icon, Table } from 'semantic-ui-react'
 
 export default function EmployeeTable(props) {
     return (
@@ -10,7 +9,7 @@ export default function EmployeeTable(props) {
                     <Table.HeaderCell>Index</Table.HeaderCell>
                     <Table.HeaderCell><button
                             onClick={() => props.sortBy("salary")} className="ui small green button"
-                        >Salary</button></Table.HeaderCell>
+                        >Salary<Icon className="angle double down"/></button></Table.HeaderCell>
                     <Table.HeaderCell>
                         First Name
                     </Table.HeaderCell>
