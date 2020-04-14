@@ -9,10 +9,11 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "semantic-ui-react": "^0.88.2"
+    "semantic-ui-react": "^0.88.2",
+    "serve": "^11.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "start: serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -26,8 +27,8 @@
       "not dead",
       "not op_mini all"
     ],
-    "engines" : { 
-      "node" : ">=10.0.0 <13.0.0" 
+    "engines": {
+      "node": ">=10.0.0 <13.0.0"
     },
     "development": [
       "last 1 chrome version",
