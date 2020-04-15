@@ -3,6 +3,7 @@ import React from 'react';
 import EmployeeTable from "./components/employee-table/index.jsx";
 import { Header, Icon } from 'semantic-ui-react'
 import './App.css';
+import DropdownSelect from "./components/dropdown/index.jsx";
 
 import data from "./data/employeedata.json";
 
@@ -17,6 +18,7 @@ class App extends React.Component {
     }
 
     this.sortBy = this.sortBy.bind(this)
+    // this.handleClick = this.handleClick.bind(this);
   }
 
   sortBy(key) {
@@ -40,6 +42,7 @@ class App extends React.Component {
           data={this.state.data}
           sortBy={this.sortBy}
         />
+        {/* <DropdownSelect/> */}
       </div>
     );
 

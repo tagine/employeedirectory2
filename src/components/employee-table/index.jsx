@@ -1,23 +1,25 @@
 import React from "react";
-import { Icon, Table } from 'semantic-ui-react'
+import { Icon, Table} from 'semantic-ui-react'
+// import TableFilter from 'react-table-filter';
+// import DropdownSelect from "../../dropdown/index.jsx";
 
 export default function EmployeeTable(props) {
     return (
         <Table celled striped>
             <Table.Header>
                 <Table.Row>
-                    <Table.HeaderCell>Index</Table.HeaderCell>
-                    <Table.HeaderCell><button
+                    <Table.HeaderCell filterkey="index">Index</Table.HeaderCell>
+                    <Table.HeaderCell filterkey="salary"><button
                             onClick={() => props.sortBy("salary")} className="ui small green button"
                         >Salary<Icon className="angle double down"/></button></Table.HeaderCell>
-                    <Table.HeaderCell>
+                    <Table.HeaderCell filterkey="first name">
                         First Name
                     </Table.HeaderCell>
-                    <Table.HeaderCell>Last Name</Table.HeaderCell>
-                    <Table.HeaderCell>Company</Table.HeaderCell>
-                    <Table.HeaderCell>Email</Table.HeaderCell>
-                    <Table.HeaderCell>Phone</Table.HeaderCell>
-                    <Table.HeaderCell>Address</Table.HeaderCell>
+                    <Table.HeaderCell filterkey="last name">Last Name</Table.HeaderCell>
+                    <Table.HeaderCell filterkey="company">Company</Table.HeaderCell>
+                    <Table.HeaderCell filterkey="email">Email</Table.HeaderCell>
+                    <Table.HeaderCell filterkey="phone">Phone</Table.HeaderCell>
+                    <Table.HeaderCell filterkey="address">Address</Table.HeaderCell>
                 </Table.Row>
             </Table.Header>
             <Table.Body>
